@@ -1,0 +1,142 @@
+\documentclass[12pt,a4paper]{article}
+
+\usepackage[T1]{fontenc}
+\usepackage[polish]{babel}
+\usepackage[utf8]{inputenc}
+\usepackage{lmodern}
+\selectlanguage{polish}
+\usepackage{graphicx}
+
+\begin{document}
+\pagenumbering{gobble}
+\clearpage
+\begin{figure}[h]
+\centering
+\includegraphics{media/ps-logo.png}
+\end{figure}
+\hspace{3cm}
+\begin{center}Programowanie obiektowe i graficzne\end{center}
+\begin{center}2022/2023\end{center}
+\hspace{3cm}
+\begin{center}\large\textbf{Programowanie obiektowe i graficzne}\end{center}
+\begin{center}\large\textit{Architektura MVP
+}\end{center}
+
+\hspace{7cm}
+\begin{flushright}Kierunek: Informatyka
+\end{flushright}
+\begin{flushright}Członkowie zespołu:
+\par
+\textit{Jessica Adamczyk, grupa 1/1}
+\par
+\textit{Kateryna Dryzhakova, grupa 1/2}
+\par
+\textit{Żaneta Hofman, grupa 1/1}
+\end{flushright}
+\vfill
+\begin{center}Gliwice, 2022/2023\end{center}
+
+\newpage
+\pagenumbering{arabic}
+\tableofcontents
+
+\newpage
+\section{Wprowadzenie}
+
+\subsection{Opis programu}
+W ramach projektu została stworzona aplikacja do organizowania książek, które chce się przeczytać lub zostały już przeczytane. Aplikacja podzielona jest na dwie części – informacje o książce oraz ocenie. W części drugiej jest możliwe dodawanie własnej oceny książki oraz komentarz do niej.
+
+\subsection{Instukcja obsługi}
+Po rozpoczęciu działania programu uruchomiane zostaje okno aplikacji.
+\begin{figure}[!h]
+    \centering
+    \includegraphics{media/2.png}
+    \caption{Strona główna aplikacji}
+\end{figure}
+\clearpage
+W oknie po lewej stronie wyświetla się pole do wyszukiwania tytułów, po wyszukaniu książki wyświetla się jej autor, wydawnictwo, opis oraz możliwość do zaznaczenia czy książka jest przeczytana czy w liście życzeń. 
+\begin{figure}[!h]
+    \centering
+    \includegraphics{media/9.png}
+    \caption{Wyszukana pozycja}
+\end{figure}
+\\
+W przypadku braku pozycji w bazie wyskakuje komunikat.
+\begin{figure}[!h]
+    \centering
+    \includegraphics{media/8.png}
+    \caption{Komunikat o braku książki}
+\end{figure}
+\clearpage
+Pod Moja Biblioteka jest wyświetlana ocena książki oraz przycisk gdzie po naciśnięciu otwiera się kolejne okno z komentarzami użytkowników do książki, którą wcześniej wyszukaliśmy. Pod tym jest możliwość dodania własnej opinii oraz komentarza.
+\begin{figure}[!h]
+    \centering
+    \includegraphics{media/11.png}
+    \caption{Opinie użytkowników}
+\end{figure}
+\clearpage
+Po wybraniu opcji Moja Biblioteka otwiera się kolejne okno, w którym mamy dwie tabele, w pierwszej wypisane książki przeczytane, a w drugiej które chcemy przeczytać.
+\begin{figure}[!h]
+    \centering
+    \includegraphics{media/7.png}
+    \caption{Moja biblioteka}
+\end{figure}
+
+\subsection{Analiza i specyfikacja wymagań}
+\begin{enumerate}
+    \item Zaprojektowanie wyglądu aplikacji z łatwym i wygodnym w obsłudze interfejsem, aby umożliwić użytkownikom łatwe wyszukiwanie książek.
+    \item Utworzenie bazy danych, która zawiera wiele książek. Każda pozycja ma tytuł, autora, krótki opis i opis autora.
+    \item Dodanie funkcjonalności dodawania opinii i komentarzy przez użytkowników. To umożliwia innym użytkownikom podzielenie się swoimi opiniami na temat danej książki i pomaga w wyborze odpowiedniej lektury.
+    \item Możliwość dodawania książek do listy życzeń lub książek przeczytanych, które pozwalają użytkownikom na kontrolowanie swojego postępu w czytaniu oraz na planowanie przyszłych lektur.
+    \item Zaimportowanie bazy danych z książkami, ocenami i opisami. To pozwala na łatwe i szybkie zarządzanie książkami w aplikacji.
+    \item Zaimportowanie bazy danych z książkami, ocenami i opisami. To pozwala na łatwe i szybkie zarządzanie książkami w aplikacji.
+\end{enumerate}
+\newpage
+
+\section{Realizacja zadania}
+\subsection{Opis działania}
+Projekt jest wykonany w architekturze MVP, przy wykorzystaniu Forms. Implementacja aplikacji napisana została w języku programowania C\#, oraz współpracuje z serwerem MySQL. Aplikacja szuka danych w bazach danych i pozwala na zapis danych o stanie czytania naszej książki w osobnej bazie.
+\subsection{Elementy aplikacji}
+Aplikacja składa się z 3 okien (Strona główna, Moja biblioteka, Recenzje) oraz 3 istotnych klas, BookPresenter, MyLibraryPresenter oraz ReviewPresenter, zajmujących się osobnymi sferami obsługi danych - zarządzanie biblioteką i recenzjami oraz moją biblioteką.\\
+\begin{figure}[!h]
+    \centering
+    \includegraphics{media/1.png}
+    \caption{Struktura projektu}
+\end{figure}
+\clearpage
+Model MVP polega na wykorzystywaniu View jako pośrednika pomiędzy Model a Presenter. W View znajduje się widok aplikacji, w Model deklaracja klas oraz pobieranie i ustawianie danych a w Presenter połączenie Model i View.
+Połączenie wszystkich tych elementów, wsparte rozbudowanym systemem obsługi wyjątków sprawia, że projekt mimo swojego rozbudowania staje się jednocześnie przejrzysty i funkcjonalny.
+
+
+W folderze Repository znajduje się odczytywanie bazy danych oraz zapis. 
+\begin{figure}[!h]
+    \centering
+    \includegraphics{media/3.png}
+    \caption{Repozytorium baz danych}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics{media/4.png}
+    \caption{Widok Modelu}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics{media/5.png}
+    \caption{Presenter}}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \includegraphics{media/6.png}
+    \caption{Odczyt danych}
+\end{figure}
+\clearpage
+\subsection{Elementy bazy danych}
+W programie zostały użyte dwie bazy danych, pierwsza to książki w której były stworzone następujące tabele: autorzy, książki, recenzje i wydawnictwo. Kolejna baza moja biblioteka w której zapisują się tytuły książek w dwóch tabelach: przeczytane i chce przeczytać. 
+\section{Wnioski}
+W programie zostały użyte dwie bazy danych, pierwsza to książki w której były stworzone następujące tabele: autorzy, książki, recenzje i wydawnictwo. Kolejna baza moja biblioteka w której zapisują się tytuły książek w dwóch tabelach: przeczytane i chce przeczytać. 
+
+\end{document}
+
+struktura projekt 
+podzielone na warstwy
+co gdzie jest jaki dostep do bazy danych
