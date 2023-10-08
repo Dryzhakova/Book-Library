@@ -1,5 +1,3 @@
-# ProjektZaliczeniowy
-
 # Program Description
 
 As part of the project, an application has been created for organizing books that you want to read or have already read. The application is divided into two parts - book information and ratings. In the second part, users can add their ratings for the books and leave comments.
