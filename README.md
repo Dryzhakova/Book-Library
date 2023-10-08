@@ -12,12 +12,17 @@ On the top right corner, there is a "My Library" button. Upon selecting "My Libr
 
 ![Book Main](https://github.com/Dryzhakova/Book-Library/raw/master/Photo/bookMainPage.png)
 
-Designing User-Friendly Interface: The application's design should be intuitive and user-friendly, ensuring easy book searches for users.
+### Designing User-Friendly Interface: 
+The application's design should be intuitive and user-friendly, ensuring easy book searches for users.
 
-Database Creation: Create a database containing a vast collection of books. Each entry should include the book's title, author, a brief description, and the author's bio.
+### Database Creation: 
+Create a database containing a vast collection of books. Each entry should include the book's title, author, a brief description, and the author's bio.
 
-User Review and Comment Functionality: Implement the ability for users to add reviews and comments. This feature enables users to share their opinions on a specific book, assisting others in choosing appropriate readings.
+### User Review and Comment Functionality: 
+Implement the ability for users to add reviews and comments. This feature enables users to share their opinions on a specific book, assisting others in choosing appropriate readings.
 
-Wishlist and Read Books Functionality: Provide the option for users to add books to their wishlist or mark them as read. This feature allows users to track their reading progress and plan future readings.
+### Wishlist and Read Books Functionality: 
+Provide the option for users to add books to their wishlist or mark them as read. This feature allows users to track their reading progress and plan future readings.
 
-Database Import: Import a database containing books, ratings, and descriptions. This functionality facilitates seamless management of books within the application, ensuring a rich and diverse collection for users.
+### Database Import: 
+Import a database containing books, ratings, and descriptions. This functionality facilitates seamless management of books within the application, ensuring a rich and diverse collection for users.
